@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr" class="case-bell-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bell Canada — Lead UX Case Study</title>
+  <link rel="stylesheet" href="https://luciole-vision.com/luciole.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Flottante -->
+  <header class="navbar-floating">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">YR</a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="index.html#expertise" data-i18n="nav_expertise">Expertise</a></li>
+        <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-lang" aria-label="Changer de langue">
+          <span id="lang-text">EN</span>
+        </button>
+        <a href="CV_Yannick_Roy.pdf" download class="btn-cv" data-i18n="nav_cv">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- En-tête -->
+  <section class="case-study-hero">
+    <div class="case-study-hero-container">
+      <a href="index.html#projects" class="back-link">← <span class="fr-only">Retour aux projets</span><span class="en-only">Back to Featured Projects</span></a>
+      <h1 class="case-title">Bell Canada</h1>
+      <p class="case-subtitle fr-only">Bell EPP : Optimisation de la conversion par l'ergonomie et l'accessibilité.</p>
+      <p class="case-subtitle en-only">Bell EPP: Optimizing conversion through usability and accessibility audits.</p>
+    </div>
+  </section>
+
+  <!-- Corps de l'étude de cas -->
+  <main class="case-study-core">
+
+    <!-- Ligne 1 : Challenge -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3 class="fr-only">Challenge</h3>
+        <h3 class="en-only">Challenge</h3>
+      </div>
+      <div class="split-right">
+        <p class="fr-only">Le portail EPP (Programme d'achats pour partenaires) de Bell Canada présentait un taux d'abandon élevé lors de l'inscription et du parcours d'achat. Les utilisateurs étaient confus quant à leur admissibilité (employés de Bell vs employés d'entreprises partenaires), de plus, d'importantes barrières d'accessibilité numérique nuisaient à l'expérience des personnes en situation de handicap, provoquant de nombreux abandons.</p>
+        <p class="en-only">The Exclusive Partner Program portal faced significant friction in its registration and ordering flow. Users were confused about program eligibility (Bell employees vs. partner company employees), and critical accessibility barriers were causing users to abandon the sign-up process.</p>
+      </div>
+    </div>
+
+    <!-- Ligne 2 : My Role -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3 class="fr-only">Mon rôle</h3>
+        <h3 class="en-only">My Role</h3>
+      </div>
+      <div class="split-right">
+        <p class="fr-only">Lead UX Researcher / Lead UX. J'ai réalisé une évaluation globale de la plateforme, combinant des tests utilisateurs et des audits d'experts pour identifier les points de friction et formuler des recommandations de design concrètes.</p>
+        <p class="en-only">Lead UX Researcher / Lead UX. I conducted a comprehensive evaluation of the platform, combining user testing and expert audits to identify friction points and provide actionable design recommendations.</p>
+      </div>
+    </div>
+
+    <!-- Ligne 3 : The Impact -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3 class="fr-only">L'impact</h3>
+        <h3 class="en-only">The Impact</h3>
+      </div>
+      <div class="split-right">
+        <ul>
+          <li class="fr-only"><strong>Compréhension accrue :</strong> Amélioration nette de la compréhension du programme et de l'admissibilité grâce à une meilleure hiérarchie de l'information.</li>
+          <li class="en-only"><strong>Enhanced Understanding:</strong> Significantly improved user comprehension regarding program benefits and eligibility through better information hierarchy.</li>
+
+          <li class="fr-only"><strong>Conformité d'accessibilité :</strong> Identification et correction d'obstacles critiques, tels que les cases à cocher non fonctionnelles pour les lecteurs d'écran, garantissant une expérience véritablement inclusive.</li>
+          <li class="en-only"><strong>Accessibility Compliance:</strong> Identified and fixed critical barriers, such as non-functional checkboxes for screen readers, ensuring a truly inclusive experience.</li>
+
+          <li class="fr-only"><strong>Inscription optimisée :</strong> Réduction drastique de la charge de travail dans le parcours d'inscription en simplifiant le contenu et les appels à l'action.</li>
+          <li class="en-only"><strong>Optimized Onboarding:</strong> Drastically reduced the workload in the registration flow by streamlining content and calls-to-action.</li>
+        </ul>
+
+        <!-- Visual Image Switcher Old vs New Landing Page -->
+        <div class="comparison-fader-container fr-only" style="margin-top: 24px;">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-bell-landing-old" onclick="switchBellLanding('old')">Ancienne page d'accueil EPP</button>
+            <button class="compare-btn" id="btn-bell-landing-new" onclick="switchBellLanding('new')">Nouvelle page d'accueil EPP</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/BellEPP/EPP-LandingOld.jpg" data-alt-src="images/BellEPP/Epp-LandingNew.png" alt="Ancienne page d'accueil EPP" id="img-bell-landing" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-fader-container en-only" style="margin-top: 24px;">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-bell-landing-old-en" onclick="switchBellLanding('old')">Legacy EPP Homepage</button>
+            <button class="compare-btn" id="btn-bell-landing-new-en" onclick="switchBellLanding('new')">New EPP Homepage</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/BellEPP/EPP-LandingOld.jpg" data-alt-src="images/BellEPP/Epp-LandingNew.png" alt="Legacy EPP Homepage" id="img-bell-landing-en" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ligne 4 : The Process -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3 class="fr-only">Le processus</h3>
+        <h3 class="en-only">The Process</h3>
+      </div>
+      <div class="split-right">
+
+        <h4 class="fr-only">Évaluation heuristique</h4>
+        <h4 class="en-only">Heuristic Evaluation</h4>
+        <p class="fr-only">Réalisation d'un audit d'expert approfondi identifiant 12 points de friction majeurs répartis sur 5 critères clés d'ergonomie cognitive (Guidage, Cohérence, Gestion des erreurs, etc.) qui nuisaient à la performance globale.</p>
+        <p class="en-only">Performed a deep-dive audit identifying 12 critical elements across 5 criteria (Consistency, Guidance, Error Management, etc.) that hindered the user experience.</p>
+
+        <h4 class="fr-only">Tests comparatifs</h4>
+        <h4 class="en-only">Comparative Testing</h4>
+        <p class="fr-only">Conduite de tests d'utilisabilité de fidélité modérée auprès de 6 participants pour valider les pistes d'optimisation ergonomiques face aux habitudes d'usage existantes.</p>
+        <p class="en-only">Conducted usability tests with 6 participants to compare the old design against the new design and identify remaining pain points.</p>
+
+        <h4 class="fr-only">Revue d'accessibilité</h4>
+        <h4 class="en-only">Accessibility Review</h4>
+        <p class="fr-only">Sessions de tests spécialisées menées avec des utilisateurs aveugles ou malvoyants sur la plateforme Fable QA pour traquer et catégoriser les obstacles techniques aux lecteurs d'écran.</p>
+        <p class="en-only">Led specialized interviews via the Fable platform with participants with visual deficiencies to identify "show-stopping" barriers for screen reader users.</p>
+
+        <!-- Pure HTML/CSS Animated Histogram (6 Bars: 6, 4, 5, 4, 1, 2) - Non-clickable, standalone, NO TITLE/SUBTITLE -->
+        <div id="bell-histogram-wrapper" class="bell-histogram-container">
+          <div class="a11y-chart-standalone">
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">6</span>
+              <div class="chart-bar-fill" data-height="100%"></div>
+              <span class="chart-bar-label">Navigation & wayfinding</span>
+            </div>
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">4</span>
+              <div class="chart-bar-fill" data-height="66%"></div>
+              <span class="chart-bar-label">Structure & semantics</span>
+            </div>
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">5</span>
+              <div class="chart-bar-fill" data-height="83%"></div>
+              <span class="chart-bar-label">Error prevention & state</span>
+            </div>
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">4</span>
+              <div class="chart-bar-fill" data-height="66%"></div>
+              <span class="chart-bar-label">Predictability & consistency</span>
+            </div>
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">1</span>
+              <div class="chart-bar-fill" data-height="17%"></div>
+              <span class="chart-bar-label">Language & readability</span>
+            </div>
+            <div class="chart-bar-col">
+              <span class="chart-bar-value">2</span>
+              <div class="chart-bar-fill" data-height="33%"></div>
+              <span class="chart-bar-label">Movement & flashing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Tabs for Audit Reports -->
+        <div class="comparison-fader-container fr-only" style="margin-top: 24px;">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-bell-report-0" onclick="switchBellReport('carousel')">Carrousel</button>
+            <button class="compare-btn" id="btn-bell-report-1" onclick="switchBellReport('email')">Adresse courriel</button>
+            <button class="compare-btn" id="btn-bell-report-2" onclick="switchBellReport('filters')">Filtres</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/BellEPP/EPP-Carousel-report.png" data-email-src="images/BellEPP/Epp-ComparativeTest-OldVScurrent-report.png" data-filters-src="images/BellEPP/EPP-NavigationState-report.png" alt="Rapport d'audit" id="img-bell-report" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-fader-container en-only" style="margin-top: 24px;">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-bell-report-0-en" onclick="switchBellReport('carousel')">Carousel</button>
+            <button class="compare-btn" id="btn-bell-report-1-en" onclick="switchBellReport('email')">Email Address</button>
+            <button class="compare-btn" id="btn-bell-report-2-en" onclick="switchBellReport('filters')">Filters</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/BellEPP/EPP-Carousel-report.png" data-email-src="images/BellEPP/Epp-ComparativeTest-OldVScurrent-report.png" data-filters-src="images/BellEPP/EPP-NavigationState-report.png" alt="Audit Report" id="img-bell-report-en" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <h4 class="fr-only">Optimisation stratégique</h4>
+        <h4 class="en-only">Strategic Refinement</h4>
+        <p class="fr-only">Formulation de recommandations concrètes pour optimiser l'ensemble du portail :</p>
+        <p class="en-only">I provided actionable recommendations to optimize the entire portal:</p>
+        <ul>
+          <li class="fr-only"><strong>Inscription simplifiée :</strong> Amélioration de la validation des formulaires et de la gestion des erreurs pour réduire l'abandon.</li>
+          <li class="en-only"><strong>Streamlined Registration:</strong> Improved form validation and error handling to reduce abandonment.</li>
+
+          <li class="fr-only"><strong>Parcours d'achat optimisé :</strong> Raffinement du parcours d'achat de bout en bout pour garantir clarté et rapidité.</li>
+          <li class="en-only"><strong>Optimized Ordering Flow:</strong> Refined the end-to-end purchasing journey to ensure clarity and speed.</li>
+
+          <li class="fr-only"><strong>Navigation et hiérarchie :</strong> Réorganisation de l'architecture d'information pour rendre les avantages du programme plus faciles à découvrir.</li>
+          <li class="en-only"><strong>Navigation & Hierarchy:</strong> Reorganized the information architecture to make program benefits more discoverable.</li>
+        </ul>
+
+        <h4 class="fr-only">Alignement de marque</h4>
+        <h4 class="en-only">Brand Alignment</h4>
+        <p class="fr-only">Audit des modèles de courriels et des formulaires pour assurer une conformité à 100 % avec le guide de style et la logique globale de Bell.</p>
+        <p class="en-only">Audited email templates and form designs to ensure 100% consistency with Bell’s global style guide and logic.</p>
+
+        <!-- Inline Visual: Email Recommendation Report -->
+        <div class="inline-visual-container">
+          <div class="preview-constrained">
+            <img src="images/BellEPP/EPP-Recommandation-EmailOffer-report.png" alt="Email Recommendation Report" class="media-zoomable" onclick="zoomImage(this)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer de bas de page -->
+  <footer class="main-footer" style="margin-top: 40px; padding: 40px 24px 60px 24px; border-top: 1px solid var(--border-color);">
+    <p>© 2026 Yannick Roy. <span data-i18n="footer_credits">Tous droits réservés. Conçu avec rigueur pour l'accessibilité.</span></p>
+    <p class="footer-luciole" data-i18n="footer_luciole">Ce portfolio utilise la typographie Luciole, conçue spécifiquement pour la déficience visuelle et la dyslexie.</p>
+  </footer>
+
+  <!-- Lightbox de zoom -->
+  <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+    <span class="lightbox-close">✕</span>
+    <img id="lightbox-img" src="" alt="Zoom Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

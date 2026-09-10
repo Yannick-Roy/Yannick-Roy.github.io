@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr" class="case-boires-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boires.ca — Lead UX Case Study</title>
+  <link rel="stylesheet" href="https://luciole-vision.com/luciole.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Flottante -->
+  <header class="navbar-floating">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">YR</a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="index.html#expertise" data-i18n="nav_expertise">Expertise</a></li>
+        <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-lang" aria-label="Changer de langue">
+          <span id="lang-text">EN</span>
+        </button>
+        <a href="CV_Yannick_Roy.pdf" download class="btn-cv" data-i18n="nav_cv">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- En-tête -->
+  <section class="case-study-hero">
+    <div class="case-study-hero-container">
+      <a href="index.html#projects" class="back-link">← <span class="fr-only">Retour aux projets</span><span class="en-only">Back to Featured Projects</span></a>
+      <h1 class="case-title">Boires.ca</h1>
+      <p class="case-subtitle fr-only">Architecture d'information, workflow et design d'interface haute fidélité pour une plateforme spécialisée dans le vin.</p>
+      <p class="case-subtitle en-only">Information Architecture, workflow and High-Fidelity UI Design for a specialized wine platform.</p>
+    </div>
+  </section>
+
+  <!-- Corps de l'étude de cas -->
+  <main class="case-study-core">
+
+    <!-- Ligne 1 : Challenge -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3><span class="fr-only">Défis</span><span class="en-only">Challenge</span></h3>
+      </div>
+      <div class="split-right">
+        <p class="fr-only">L'objectif était de moderniser l'écosystème de commande d'origine de Boires.ca. Il fallait remplacer un système fragmenté de traitement manuel (commandes par téléphone et courriel) par une plateforme transactionnelle centralisée, intégrant un panier numérique robuste et une passerelle de paiement en ligne adaptée aux besoins spécifiques de leurs marchés B2B et B2C.</p>
+        <p class="en-only">The objective was to modernize Boires.ca’s legacy ordering ecosystem. We needed to replace a fragmented system of manual processing (phone and email orders) with a centralized transactional platform, integrating a robust digital cart and online payment gateway tailored to the specific needs of their B2B and B2C markets.</p>
+      </div>
+    </div>
+
+    <!-- Ligne 2 : My Role -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3><span class="fr-only">Mon rôle</span><span class="en-only">My Role</span></h3>
+      </div>
+      <div class="split-right">
+        <p class="fr-only">Lead UX/UI Designer. J'ai dirigé la stratégie de design de bout en bout, définissant l'architecture d'information, établissant les modèles d'interaction et livrant des spécifications fonctionnelles complètes pour le développement.</p>
+        <p class="en-only">Lead UX/UI Designer. I directed the end-to-end design strategy, defining the information architecture, establishing the interaction models, and delivering comprehensive functional specifications for development.</p>
+      </div>
+    </div>
+
+    <!-- Ligne 3 : The Impact -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3><span class="fr-only">L'impact</span><span class="en-only">The Impact</span></h3>
+      </div>
+      <div class="split-right">
+        <ul>
+          <li class="fr-only"><strong>Fidélité d'implémentation :</strong> La plateforme en ligne reflète fidèlement les prototypes haute fidélité. Des spécifications fonctionnelles détaillées ont permis aux développeurs indépendants de construire et lancer le système en toute autonomie, en préservant la vision UX d'origine.</li>
+          <li class="en-only"><strong>Implementation Fidelity:</strong> The live platform reflects the high-fidelity prototypes. Detailed functional specifications allowed independent developers to build and launch the system autonomously, maintaining the original UX vision.</li>
+
+          <li class="fr-only"><strong>Fluidité transactionnelle :</strong> Conception réussie d'un tunnel de paiement en plusieurs étapes gérant de manière transparente les réglementations complexes sur les alcools canadiens (directives de la SAQ) et la taxation spécifique par province derrière une interface utilisateur sans friction.</li>
+          <li class="en-only"><strong>Transactional Fluidity:</strong> Successfully architected a multi-step checkout flow that seamlessly handles complex Canadian liquor regulations (SAQ guidelines) and province-specific taxation behind a frictionless user interface.</li>
+
+          <li class="fr-only"><strong>Synergie contenu-commerce :</strong> Création d'un écosystème numérique unifié où coexistent contenu éducatif et commerce électronique, en s'appuyant sur l'autorité existante de la marque pour stimuler la découverte organique de produits et les ventes.</li>
+          <li class="en-only"><strong>Content-to-Commerce Synergy:</strong> Created a unified digital ecosystem where educational content and e-commerce coexist, leveraging the brand's existing authority to drive organic product discovery and sales.</li>
+        </ul>
+
+        <!-- Impact Tab Switcher: Live Homepage vs Legacy Homepage -->
+        <div class="comparison-fader-container fr-only">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-boires-impact-new" onclick="switchBoiresImpact('new')">Page d'accueil en production</button>
+            <button class="compare-btn" id="btn-boires-impact-old" onclick="switchBoiresImpact('old')">Ancienne page d'accueil</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/Boires/Boires-InProduction-accueil.png" alt="Page d'accueil en production" id="img-boires-impact" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-fader-container en-only">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-boires-impact-new-en" onclick="switchBoiresImpact('new')">Live Homepage</button>
+            <button class="compare-btn" id="btn-boires-impact-old-en" onclick="switchBoiresImpact('old')">Legacy Homepage</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/Boires/Boires-InProduction-accueil.png" alt="Live Homepage" id="img-boires-impact-en" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ligne 4 : The Process -->
+    <div class="split-row">
+      <div class="split-left">
+        <h3><span class="fr-only">Le processus</span><span class="en-only">The Process</span></h3>
+      </div>
+      <div class="split-right">
+
+        <!-- 1. Persona-Driven Strategy -->
+        <h4><span class="fr-only">Stratégie basée sur les personas</span><span class="en-only">Persona-Driven Strategy</span></h4>
+        <p class="fr-only">Cartographie de trois modèles mentaux d'utilisateurs distincts — l'Amateur (achat en gros), l'Expert (spécifications techniques) et l'Enthousiaste (exploration) — pour concevoir des parcours d'achat personnalisés selon le niveau de connaissance du vin.</p>
+        <p class="en-only">Mapped three distinct user mental models—the Amateur (bulk purchasing), the Expert (technical specifications), and the Enthusiast (exploration)—to architect tailored purchasing journeys based on wine literacy.</p>
+
+        <div class="inline-visual-container">
+          <div class="preview-constrained">
+            <img src="images/Boires/Boires-Persona-Expert.jpeg" alt="L'Expert Persona" class="media-zoomable" onclick="zoomImage(this)">
+          </div>
+        </div>
+
+        <!-- 2. Information Architecture (IA) -->
+        <h4><span class="fr-only">Architecture d'information (IA)</span><span class="en-only">Information Architecture (IA)</span></h4>
+        <p class="fr-only">Restructuration complète de l'écosystème numérique pour équilibrer le catalogue de produits, les histoires de producteurs et le contenu du blogue éducatif.</p>
+        <p class="en-only">Restructured the entire digital ecosystem to balance product catalogs, producer stories, and educational blog content.</p>
+
+        <div class="inline-visual-container">
+          <div class="preview-constrained">
+            <img src="images/Boires/Boires-AI-AjouterAuPanier.png" alt="Architecture d'information - Flux d'ajout au panier" class="media-zoomable" onclick="zoomImage(this)">
+          </div>
+        </div>
+
+        <!-- 3. Content Prioritization -->
+        <h4><span class="fr-only">Priorisation du contenu</span><span class="en-only">Content Prioritization</span></h4>
+        <p class="fr-only">Utilisation du tri de cartes et de la stratégie de contenu pour définir un système de filtrage essentiel (provenance, prix, accords), réduisant considérablement la charge mentale et la fatigue décisionnelle lors de sélections de produits complexes.</p>
+        <p class="en-only">Leveraged card sorting and content strategy to define an essential filtering system (provenance, price, pairings), drastically reducing cognitive load and decision fatigue during complex product selections.</p>
+
+        <!-- 4. High-Fidelity Prototyping & Business Rules -->
+        <h4><span class="fr-only">Prototypage haute fidélité & règles d'affaires</span><span class="en-only">High-Fidelity Prototyping & Business Rules</span></h4>
+        <p class="fr-only">Développement d'un système de design robuste et de maquettes interactives traduisant visuellement des règles d'affaires complexes (calculs de taxes SAQ, logique d'inventaire) en modèles d'interface intuitifs.</p>
+        <p class="en-only">Developed a robust design system and interactive wireframes that visually translated complex business rules (SAQ tax calculations, inventory logic) into intuitive UI patterns.</p>
+
+        <!-- Wireframes Tab Switcher: Accueil, Produit, Panier d'achat, Commande -->
+        <div class="comparison-fader-container fr-only">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-boires-wf-home" onclick="switchBoiresWireframes('home')">Accueil</button>
+            <button class="compare-btn" id="btn-boires-wf-prod" onclick="switchBoiresWireframes('product')">Produit</button>
+            <button class="compare-btn" id="btn-boires-wf-cart" onclick="switchBoiresWireframes('cart')">Panier d'achat</button>
+            <button class="compare-btn" id="btn-boires-wf-checkout" onclick="switchBoiresWireframes('checkout')">Commande</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/Boires/Boires-Wireframes-AccueilDesktop.png" alt="Wireframe Accueil" id="img-boires-wireframes" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-fader-container en-only">
+          <div class="comparison-toggle-buttons">
+            <button class="compare-btn active" id="btn-boires-wf-home-en" onclick="switchBoiresWireframes('home')">Home</button>
+            <button class="compare-btn" id="btn-boires-wf-prod-en" onclick="switchBoiresWireframes('product')">Product</button>
+            <button class="compare-btn" id="btn-boires-wf-cart-en" onclick="switchBoiresWireframes('cart')">Cart</button>
+            <button class="compare-btn" id="btn-boires-wf-checkout-en" onclick="switchBoiresWireframes('checkout')">Checkout</button>
+          </div>
+          <div class="compare-images-wrapper">
+            <div class="preview-constrained">
+              <img src="images/Boires/Boires-Wireframes-AccueilDesktop.png" alt="Wireframe Home" id="img-boires-wireframes-en" class="media-zoomable comparison-img" onclick="zoomImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Design for Production -->
+        <h4><span class="fr-only">Design pour la production</span><span class="en-only">Design for Production</span></h4>
+        <p class="fr-only">Livraison d'actifs d'interface précis et de spécifications fonctionnelles annotées, garantissant un transfert clair et sans ambiguïté pour l'implémentation technique.</p>
+        <p class="en-only">Delivered precise UI assets and annotated functional specifications, ensuring a clear and unambiguous hand-off for technical implementation.</p>
+
+        <div class="inline-visual-container">
+          <div class="preview-constrained">
+            <img src="images/Boires/Boires-wireframe-spec.png" alt="Spécifications fonctionnelles et wireframes" class="media-zoomable" onclick="zoomImage(this)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer de bas de page -->
+  <footer class="main-footer" style="margin-top: 40px; padding: 40px 24px 60px 24px; border-top: 1px solid var(--border-color);">
+    <p>© 2026 Yannick Roy. <span data-i18n="footer_credits">Tous droits réservés. Conçu avec rigueur pour l'accessibilité.</span></p>
+    <p class="footer-luciole" data-i18n="footer_luciole">Ce portfolio utilise la typographie Luciole, conçue spécifiquement pour la déficience visuelle et la dyslexie.</p>
+  </footer>
+
+  <!-- Lightbox de zoom -->
+  <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+    <span class="lightbox-close">✕</span>
+    <img id="lightbox-img" src="" alt="Zoom Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

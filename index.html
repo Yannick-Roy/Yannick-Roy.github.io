@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yannick Roy — Lead UX & Product Designer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Flottante -->
+  <header class="navbar-floating">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">YR</a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="index.html#expertise" data-i18n="nav_expertise">Expertise</a></li>
+        <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-lang" aria-label="Changer de langue">
+          <span id="lang-text">EN</span>
+        </button>
+        <a href="CV_Yannick_Roy.pdf" download class="btn-cv" data-i18n="nav_cv">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section Hero (Parfaitement Centrée) -->
+  <section class="hero-section">
+    <div class="hero-status">
+      <span class="pulsing-dot"></span>
+      <span data-i18n="hero_status">Disponible pour un poste permanent Senior / Lead UX</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="stagger-word">Yannick</span>
+      <span class="stagger-word">Roy</span>
+    </h1>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">
+      Lead UX & Product Designer avec 17 ans d’expérience. Spécialisé en <strong>ergonomie cognitive</strong>, <strong>design centré utilisateur</strong> et transformation de services complexes.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary" data-i18n="hero_cta_primary">Découvrir mes projets</a>
+      <a href="#contact" class="btn-secondary" data-i18n="nav_contact">Contact</a>
+    </div>
+  </section>
+
+  <!-- Section Projets (Bento Grid Visuelle & Épurée) -->
+  <section id="projects" class="projects-section">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="projects_title">Projets</h2>
+      </div>
+
+    <div class="bento-grid">
+      <!-- Carte 1 : BDC (Large - Horizontale) -->
+      <a href="bdc.html" class="bento-card card-large card-bdc">
+        <div class="card-content">
+          <div class="card-text-side">
+            <div class="card-tags">
+              <span class="tag">Tablet app</span>
+              <span class="tag">Fintech</span>
+              <span class="tag">Ux Lead</span>
+            </div>
+            <h3 class="card-project-title">BDC</h3>
+            <p class="card-desc" data-i18n="project_bdc_desc">Refonte d'un système national d'autorisation de prêts. Réduction du cycle de validation de 10 jours à 24 heures, facilitant 240 M$ de transactions.</p>
+          </div>
+          <div class="card-visual-side">
+            <div class="ambient-glow"></div>
+            <img src="images/BDC/BDC-Prototype-Tablet.png" alt="BDC Prototype" class="project-img-direct bdc-tablet-image">
+          </div>
+        </div>
+      </a>
+
+      <!-- Carte 2 : Bell (Medium - Verticale avec image pleine largeur au bas) -->
+      <a href="bell.html" class="bento-card card-medium card-bell">
+        <div class="card-content">
+          <div class="card-text-side">
+            <div class="card-tags">
+              <span class="tag">Desktop</span>
+              <span class="tag">Telecom</span>
+              <span class="tag">UX Research</span>
+            </div>
+            <h3 class="card-project-title">Bell Canada</h3>
+            <p class="card-desc" data-i18n="project_bell_desc">Benchmark, tests utilisateurs et audit d'accessibilité pour Bell Canada. Exemple d'application au portail EPP.</p>
+          </div>
+          <div class="card-visual-side">
+            <div class="ambient-glow"></div>
+            <img src="images/BellEPP/EPP-LandingOld.jpg" alt="Bell EPP Portal" class="project-img-direct">
+          </div>
+        </div>
+      </a>
+
+      <!-- Carte 3 : Boires.ca (Medium - Verticale avec image pleine largeur au bas) -->
+      <a href="boires.html" class="bento-card card-medium card-boires">
+        <div class="card-content">
+          <div class="card-text-side">
+            <div class="card-tags">
+              <span class="tag">E-Commerce</span>
+              <span class="tag">Information architecture</span>
+              <span class="tag">UX Design</span>
+            </div>
+            <h3 class="card-project-title">Boires.ca</h3>
+            <p class="card-desc" data-i18n="project_boires_desc">Design d'une plateforme spécialisée vin. Alignement des règles d'affaires et définition des parcours utilisateurs.</p>
+          </div>
+          <div class="card-visual-side">
+            <div class="ambient-glow"></div>
+            <img src="images/Boires/Boires-Noir-Illustration.png" alt="Boires Illustration" class="project-img-direct boires-img-default">
+            <img src="images/Boires/Boires-Blanc-Illustration.png" alt="Boires Illustration" class="project-img-direct boires-img-hover">
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Expertise -->
+  <section id="expertise" class="expertise-section">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="expertise_title">Expertise</h2>
+      </div>
+
+    <div class="expertise-grid">
+      <!-- 01 — Ergonomie Cognitive -->
+      <div class="expertise-card">
+        <span class="expertise-number">1</span>
+        <div class="expertise-card-content">
+          <h3 data-i18n="expertise_1_title">Ergonomie Cognitive</h3>
+          <p data-i18n="expertise_1_desc">Compréhension du fonctionnement humain (système attentionnel, mémoire, théories de l'apprentissage) appliquée à la conception d'interfaces pour réduire la charge mentale.</p>
+        </div>
+      </div>
+
+      <!-- 02 — Design Centré Utilisateur (UX) -->
+      <div class="expertise-card">
+        <span class="expertise-number">2</span>
+        <div class="expertise-card-content">
+          <h3 data-i18n="expertise_2_title">Design Centré Utilisateur (UX)</h3>
+          <p data-i18n="expertise_2_desc">Philosophie et processus holistiques plaçant l'humain au cœur de la conception, de la recherche exploratoire à la validation continue.</p>
+        </div>
+      </div>
+
+      <!-- 03 — Architecture d'Information & Systèmes -->
+      <div class="expertise-card">
+        <span class="expertise-number">3</span>
+        <div class="expertise-card-content">
+          <h3 data-i18n="expertise_3_title">Architecture d'Information & Systèmes</h3>
+          <p data-i18n="expertise_3_desc">Structuration de systèmes d'information, modélisation de flux d'affaires complexes (workflows) et gouvernance de solutions évolutives.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Arsenal Méthodologique (Tags Unifiés) -->
+    <div class="methodologies-container">
+      <h3 class="methodologies-title" data-i18n="methodologies_title">Méthodes & pratiques</h3>
+      <div class="methodologies-tags">
+        <span class="exp-tag" data-i18n="exp_tag_heuristics">Évaluation heuristique</span>
+        <span class="exp-tag" data-i18n="exp_tag_card_sorting">Tri de cartes</span>
+        <span class="exp-tag" data-i18n="exp_tag_tree_jack">Tree testing / Tree jack</span>
+        <span class="exp-tag" data-i18n="exp_tag_user_testing">Test utilisateur</span>
+        <span class="exp-tag" data-i18n="exp_tag_interview">Entrevue</span>
+        <span class="exp-tag" data-i18n="exp_tag_user_journey">User journey</span>
+        <span class="exp-tag" data-i18n="exp_tag_persona">Persona</span>
+        <span class="exp-tag" data-i18n="exp_tag_benchmark">Benchmark</span>
+        <span class="exp-tag" data-i18n="exp_tag_info_architecture">Information architecture</span>
+        <span class="exp-tag" data-i18n="exp_tag_workflow">Workflow</span>
+        <span class="exp-tag" data-i18n="exp_tag_design_system">Design System</span>
+        <span class="exp-tag" data-i18n="exp_tag_roadmap">Feuille de route (Roadmap)</span>
+        <span class="exp-tag" data-i18n="exp_tag_wcag">WCAG</span>
+      </div>
+    </div>
+
+    <!-- Section Tech Stack Monochrome & Interactive -->
+    <div class="tech-stack-container">
+      <h3 class="tech-stack-title" data-i18n="tech_stack_title">Écosystème & outils</h3>
+      <div class="tech-stack-grid">
+        <div class="tech-tool-item" title="Figma">
+          <div class="tool-logo-wrapper">
+            <img src="images/Logo/Figma.avif" alt="Figma" class="tech-logo">
+          </div>
+          <span class="tool-name">Figma</span>
+        </div>
+        <div class="tech-tool-item" title="Axure RP">
+          <div class="tool-logo-wrapper">
+            <img src="images/Logo/Axure.png" alt="Axure" class="tech-logo">
+          </div>
+          <span class="tool-name">Axure RP</span>
+        </div>
+        <div class="tech-tool-item" title="Fable QA">
+          <div class="tool-logo-wrapper">
+            <img src="images/Logo/Fable.png" alt="Fable QA" class="tech-logo">
+          </div>
+          <span class="tool-name">Fable QA</span>
+        </div>
+        <div class="tech-tool-item" title="Miro">
+          <div class="tool-logo-wrapper">
+            <img src="images/Logo/Miro.png" alt="Miro" class="tech-logo">
+          </div>
+          <span class="tool-name">Miro</span>
+        </div>
+        <div class="tech-tool-item" title="UserTesting">
+          <div class="tool-logo-wrapper">
+            <img src="images/Logo/Usertesting.png" alt="UserTesting" class="tech-logo">
+          </div>
+          <span class="tool-name">UserTesting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact & Footer -->
+  <section id="contact" class="contact-section">
+    <div class="contact-card">
+      <h2 class="contact-title" data-i18n="contact_title">Prêt à rejoindre votre équipe</h2>
+      <p class="contact-subtitle" data-i18n="contact_subtitle">Actuellement ouvert aux opportunités permanentes en tant que Senior ou Lead UX / Product Designer. Basé à Ottawa (disponible pour le télétravail).</p>
+      <a href="mailto:yannick.roy@gmail.com" class="btn-primary contact-btn" data-i18n="contact_btn">Discuter d’une opportunité</a>
+    </div>
+
+    <footer class="main-footer">
+      <p>© 2026 Yannick Roy. <span data-i18n="footer_credits">Tous droits réservés. Conçu avec rigueur pour l'accessibilité.</span></p>
+      <p class="footer-luciole" data-i18n="footer_luciole">Ce portfolio utilise la typographie Luciole, conçue spécifiquement pour la déficience visuelle et la dyslexie.</p>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
