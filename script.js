@@ -138,6 +138,16 @@ function updatePageLanguage(lang) {
   if (langText) {
     langText.textContent = lang === "fr" ? "EN" : "FR";
   }
+
+  // Lien du CV selon la langue
+  const cvBtn = document.querySelector(".btn-cv");
+  if (cvBtn) {
+    if (lang === "fr") {
+      cvBtn.setAttribute("href", "CV_Yannick-Roy_2026_fr.pdf");
+    } else {
+      cvBtn.setAttribute("href", "CV_Yannick-Roy_2026_en.pdf");
+    }
+  }
 }
 
 // ==========================================
