@@ -8,7 +8,7 @@ const translations = {
     nav_contact: "Contact",
     nav_cv: "CV",
     hero_status: "Disponible pour un poste permanent Senior / Lead UX",
-    hero_subtitle: "Lead UX & Product Designer avec 17 ans d’expérience. Spécialisé en <strong>ergonomie cognitive</strong>, <strong>design centré utilisateur</strong> et transformation de services complexes.",
+    hero_subtitle: "Lead UX & Product Designer avec 17 ans d’expérience. Spécialisé en <strong>ergonomie cognitive</strong>, <strong>design centré utilisateur</strong>.",
     hero_cta_primary: "Découvrir mes projets",
 
     // Bento Grid Projets
@@ -46,13 +46,13 @@ const translations = {
     exp_tag_design_system: "Design System",
     exp_tag_roadmap: "Feuille de route (Roadmap)",
     exp_tag_wcag: "WCAG",
-    tech_stack_title: "Écosystème & outils",
+    tech_stack_title: "outils",
 
     // Section Contact & Footer
     contact_title: "Prêt à rejoindre votre équipe",
     contact_subtitle: "Actuellement ouvert aux opportunités permanentes en tant que Senior ou Lead UX / Product Designer. Basé à Ottawa (disponible pour le télétravail).",
     contact_btn: "Discuter d’une opportunité",
-    footer_credits: "Tous droits réservés. Conçu avec rigueur pour l'accessibilité.",
+    footer_credits: "Tous droits réservés.",
     footer_luciole: "Ce portfolio utilise la typographie Luciole, conçue spécifiquement pour la déficience visuelle et la dyslexie."
   },
   en: {
@@ -61,7 +61,7 @@ const translations = {
     nav_contact: "Contact",
     nav_cv: "Resume",
     hero_status: "Seeking permanent Senior / Lead UX roles",
-    hero_subtitle: "Lead UX & Product Designer with 17 years of experience. Specialized in <strong>cognitive ergonomics</strong>, <strong>user-centered design</strong>, and complex service transformation.",
+    hero_subtitle: "Lead UX & Product Designer with 17 years of experience. Specialized in <strong>cognitive ergonomics</strong>, <strong>user-centered design</strong>.",
     hero_cta_primary: "Explore my work",
 
     // Bento Grid Projects
@@ -99,13 +99,13 @@ const translations = {
     exp_tag_design_system: "Design System",
     exp_tag_roadmap: "UX Roadmap",
     exp_tag_wcag: "WCAG Compliance",
-    tech_stack_title: "Ecosystem & Tools",
+    tech_stack_title: "Tools",
 
     // Section Contact & Footer
     contact_title: "Ready to join your team",
     contact_subtitle: "Currently seeking permanent Senior or Lead UX / Product Designer roles. Based in Ottawa, fully equipped for remote collaboration.",
     contact_btn: "Let's discuss opportunities",
-    footer_credits: "All rights reserved. Rigorously designed for accessibility.",
+    footer_credits: "All rights reserved.",
     footer_luciole: "This portfolio is set in Luciole, a typeface specifically designed for visual impairment and dyslexia."
   }
 };
