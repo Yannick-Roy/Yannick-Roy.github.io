@@ -32,7 +32,6 @@
     main { max-width:1200px; margin:0 auto; padding:0 24px; }
     section { padding:96px 0; }
     section[id] { scroll-margin-top:96px; }
-    #projects { padding-bottom:60vh; }
     section + section { border-top:1px solid var(--line); }
     h1 { font-family:var(--font-display); font-weight:600; font-size:40px; line-height:1.1; letter-spacing:-0.02em; color:var(--ink); margin:0 0 24px; }
     h2 { font-family:var(--font-display); font-weight:600; font-size:30px; line-height:1.15; color:var(--ink); margin:0 0 48px; }
@@ -46,7 +45,7 @@
     .stats { background:var(--wash); border-radius:12px; padding:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
     .stat-num { font-family:var(--font-display); font-weight:600; font-size:44px; color:var(--ink); line-height:1.1; }
     .stat-label { font-size:14px; color:var(--muted); line-height:1.5; margin-top:8px; }
-    .projects-grid { display:block; }
+    .projects-grid { display:block; padding-bottom:60vh; }
     .card { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; background:var(--paper); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:32px; text-decoration:none; color:inherit; margin-bottom:48px; position:sticky; top:96px; }
     .projects-grid .card:nth-child(2) { top:112px; }
     .projects-grid .card:nth-child(3) { top:128px; }
@@ -73,7 +72,7 @@
     @media (prefers-reduced-motion: reduce) {
       .fade { opacity:1; transform:none; transition:none; }
       .card { position:static; }
-      #projects { padding-bottom:96px; }
+      .projects-grid { padding-bottom:0; }
     }
   </style>
 </head>
