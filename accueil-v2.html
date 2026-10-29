@@ -53,8 +53,8 @@
     .card:hover { border-color:var(--accent-deep); }
     .card img { width:100%; border-radius:12px; border:1px solid var(--line); box-shadow:var(--shadow); }
     .card p { margin:0; }
-    .tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
-    .tag { font-size:14px; padding:4px 12px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
+    .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+    .tag { font-size:12px; line-height:1.5; padding:3px 10px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
     .expertise-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
     .expertise-card { border:1px solid var(--line); border-radius:12px; padding:32px; box-shadow:var(--shadow); }
     .methods { display:flex; flex-wrap:wrap; gap:8px; margin-top:48px; }
@@ -186,7 +186,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Yannick Roy. <span data-i18n="footer_credits">Tous droits réservés.</span></p>
+    <p>© 2026 Yannick Roy</p>
   </footer>
 
   <script>
@@ -219,8 +219,7 @@
         exp_tag_roadmap: "Feuille de route (Roadmap)", exp_tag_wcag: "WCAG",
         contact_title: "Prêt à rejoindre votre équipe",
         contact_subtitle: "Actuellement ouvert aux opportunités permanentes en tant que Senior ou Lead UX / Product Designer. Basé à Ottawa (disponible pour le télétravail).",
-        contact_btn: "Discuter d’une opportunité",
-        footer_credits: "Tous droits réservés."
+        contact_btn: "Discuter d’une opportunité"
       },
       en: {
         nav_projects: "Projects", nav_expertise: "Expertise", nav_contact: "Contact", nav_cv: "Resume",
@@ -250,8 +249,7 @@
         exp_tag_roadmap: "UX Roadmap", exp_tag_wcag: "WCAG Compliance",
         contact_title: "Ready to join your team",
         contact_subtitle: "Currently seeking permanent Senior or Lead UX / Product Designer roles. Based in Ottawa, fully equipped for remote collaboration.",
-        contact_btn: "Let's discuss opportunities",
-        footer_credits: "All rights reserved."
+        contact_btn: "Let's discuss opportunities"
       }
     };
     function getInitialLanguage() {
