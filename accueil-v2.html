@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yannick Roy — Lead UX &amp; Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper:#FFFFFF; --wash:#F5F7FA;
+      --ink:#102A43; --ink-soft:#334E68; --muted:#62748A; --line:#E2E8F0;
+      --accent:#1B7FBB; --accent-deep:#0E5A8A; --accent-wash:#E8F3FA;
+      --font-display:"Fraunces",Georgia,serif; --font-body:"Inter",system-ui,sans-serif;
+      --radius:12px; --shadow:0 1px 2px rgba(16,42,67,.06),0 8px 24px rgba(16,42,67,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink-soft); font-family:var(--font-body); font-size:17px; line-height:1.65; }
+    a { color:var(--accent-deep); }
+    a:focus-visible, button:focus-visible { outline:2px solid var(--accent-deep); outline-offset:2px; }
+    .progress { position:fixed; top:0; left:0; height:3px; background:var(--accent); width:0; z-index:100; }
+    header { position:sticky; top:0; background:rgba(255,255,255,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); z-index:99; }
+    .nav { max-width:1200px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:24px; }
+    .nav-logo { font-family:var(--font-display); font-weight:600; font-size:24px; color:var(--ink); text-decoration:none; }
+    .nav-links { display:flex; gap:24px; list-style:none; margin:0 0 0 auto; padding:0; }
+    .nav-links a { color:var(--ink-soft); text-decoration:none; font-size:16px; min-height:44px; display:flex; align-items:center; }
+    .nav-links a:hover { color:var(--accent-deep); }
+    .btn-lang { min-width:44px; min-height:44px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:600 14px var(--font-body); cursor:pointer; }
+    .btn-cv { min-height:44px; display:flex; align-items:center; padding:0 16px; border-radius:8px; background:var(--accent-deep); color:#fff; text-decoration:none; font-size:14px; font-weight:600; }
+    .btn-cv:hover { background:var(--ink); }
+    main { max-width:1200px; margin:0 auto; padding:0 24px; }
+    section { padding:96px 0; }
+    section[id] { scroll-margin-top:96px; }
+    section + section { border-top:1px solid var(--line); }
+    h1 { font-family:var(--font-display); font-weight:600; font-size:40px; line-height:1.1; letter-spacing:-0.02em; color:var(--ink); margin:0 0 24px; }
+    h2 { font-family:var(--font-display); font-weight:600; font-size:30px; line-height:1.15; color:var(--ink); margin:0 0 48px; }
+    h3 { font-size:20px; line-height:1.3; font-weight:600; color:var(--ink); margin:0 0 8px; }
+    .lead { font-size:20px; line-height:1.6; max-width:760px; margin:0 0 32px; }
+    .hero-status { font-size:14px; color:var(--muted); margin-bottom:16px; }
+    .hero-cta { display:flex; gap:16px; flex-wrap:wrap; }
+    .btn-primary { min-height:44px; display:inline-flex; align-items:center; padding:0 24px; border-radius:8px; background:var(--accent-deep); color:#fff; text-decoration:none; font-weight:600; font-size:16px; }
+    .btn-primary:hover { background:var(--ink); }
+    .btn-secondary { min-height:44px; display:inline-flex; align-items:center; padding:0 24px; border-radius:8px; border:1px solid var(--line); color:var(--ink); text-decoration:none; font-weight:600; font-size:16px; }
+    .stats { background:var(--wash); border-radius:12px; padding:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+    .stat-num { font-family:var(--font-display); font-weight:600; font-size:44px; color:var(--ink); line-height:1.1; }
+    .stat-label { font-size:14px; color:var(--muted); line-height:1.5; margin-top:8px; }
+    .projects-grid { display:block; }
+    .stack-spacer { height:60vh; }
+    .card { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; background:var(--paper); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:32px; text-decoration:none; color:inherit; margin-bottom:48px; position:sticky; top:96px; }
+    .projects-grid .card:nth-child(2) { top:112px; }
+    .projects-grid .card:nth-child(3) { top:128px; }
+    .card:hover { border-color:var(--accent-deep); }
+    .card img { width:100%; border-radius:12px; border:1px solid var(--line); box-shadow:var(--shadow); }
+    .card p { margin:0; }
+    .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+    .tag { font-size:12px; line-height:1.5; padding:3px 10px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
+    .expertise-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .expertise-card { border:1px solid var(--line); border-radius:12px; padding:32px; box-shadow:var(--shadow); }
+    .methods { display:flex; flex-wrap:wrap; gap:8px; margin-top:48px; }
+    .contact-card { background:var(--accent-wash); border-radius:12px; padding:64px; text-align:center; }
+    .contact-card p { max-width:760px; margin:0 auto 32px; }
+    footer { max-width:1200px; margin:0 auto; padding:32px 24px 48px; font-size:14px; color:var(--muted); border-top:1px solid var(--line); }
+    .fade { opacity:0; transform:translateY(24px); transition:opacity 600ms ease-out, transform 600ms ease-out; }
+    .fade.visible { opacity:1; transform:none; }
+    @media (max-width: 800px) {
+      h1 { font-size:32px; } h2 { font-size:26px; } section { padding:64px 0; }
+      .stats { grid-template-columns:1fr 1fr; padding:32px; }
+      .card { grid-template-columns:1fr; }
+      .expertise-grid { grid-template-columns:1fr; }
+      .nav-links { display:none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade { opacity:1; transform:none; transition:none; }
+      .card { position:static; }
+      .stack-spacer { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <nav class="nav">
+      <a href="accueil-v2.html" class="nav-logo">YR</a>
+      <ul class="nav-links">
+        <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="#expertise" data-i18n="nav_expertise">Expertise</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <button id="lang-toggle" class="btn-lang" aria-label="Changer de langue"><span id="lang-text">EN</span></button>
+      <a href="CV_Yannick-Roy_2026_fr.pdf" class="btn-cv" data-i18n="nav_cv">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="fade">
+      <p class="hero-status" data-i18n="hero_status">Disponible pour un poste permanent Senior / Lead UX</p>
+      <h1>Yannick Roy</h1>
+      <p class="lead" data-i18n="hero_subtitle">Lead UX &amp; Product Designer avec 17 ans d’expérience. Spécialisé en <strong>ergonomie cognitive</strong>, <strong>design centré utilisateur</strong> et transformation de services complexes.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary" data-i18n="hero_cta_primary">Découvrir mes projets</a>
+        <a href="#contact" class="btn-secondary" data-i18n="nav_contact">Contact</a>
+      </div>
+    </section>
+
+    <section class="fade">
+      <div class="stats">
+        <div><div class="stat-num">17</div><div class="stat-label" data-i18n="stat_years">années d’expérience en UX et design produit</div></div>
+        <div><div class="stat-num">240 M$</div><div class="stat-label" data-i18n="stat_bdc">de transactions facilitées par la refonte BDC</div></div>
+        <div><div class="stat-num">10 j → 24 h</div><div class="stat-label" data-i18n="stat_cycle">cycle d’autorisation de prêts, avant et après la refonte BDC</div></div>
+        <div><div class="stat-num">160</div><div class="stat-label" data-i18n="stat_bell">participants au benchmark Internet Buyflow (Bell)</div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade">
+      <h2 data-i18n="projects_title">Projets</h2>
+      <div class="projects-grid">
+        <a href="bdc.html" class="card">
+          <div>
+            <div class="tags"><span class="tag">Tablet app</span><span class="tag">Fintech</span><span class="tag">Ux Lead</span></div>
+            <h3>BDC</h3>
+            <p data-i18n="project_bdc_desc">Refonte d'un système national d'autorisation de prêts. Réduction du cycle de validation de 10 jours à 24 heures, facilitant 240 M$ de transactions.</p>
+          </div>
+          <img src="images/BDC/BDC-Prototype-Tablet.png" alt="Prototype tablette BDC : écran d'autorisation de prêt" />
+        </a>
+        <a href="bell.html" class="card">
+          <div>
+            <div class="tags"><span class="tag">Desktop</span><span class="tag">Telecom</span><span class="tag">UX Research</span></div>
+            <h3>Bell Canada</h3>
+            <p data-i18n="project_bell_desc">Benchmark, tests utilisateurs et audit d'accessibilité pour Bell Canada. Exemple d'application au portail EPP.</p>
+          </div>
+          <img src="images/BellEPP/EPP-LandingOld.jpg" alt="Ancien portail EPP de Bell, avant la refonte" />
+        </a>
+        <a href="boires.html" class="card">
+          <div>
+            <div class="tags"><span class="tag">E-Commerce</span><span class="tag">Information architecture</span><span class="tag">UX Design</span></div>
+            <h3>Boires.ca</h3>
+            <p data-i18n="project_boires_desc">Design d'une plateforme spécialisée vin. Alignement des règles d'affaires et définition des parcours utilisateurs.</p>
+          </div>
+          <img src="images/Boires/Boires-Noir-Illustration.png" alt="Illustration de la plateforme Boires.ca" />
+        </a>
+        <div class="stack-spacer" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="expertise" class="fade">
+      <h2 data-i18n="expertise_title">Expertise</h2>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 data-i18n="expertise_1_title">Ergonomie Cognitive</h3>
+          <p data-i18n="expertise_1_desc">Compréhension du fonctionnement humain (système attentionnel, mémoire, théories de l'apprentissage) appliquée à la conception d'interfaces pour réduire la charge mentale.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 data-i18n="expertise_2_title">Design Centré Utilisateur (UX)</h3>
+          <p data-i18n="expertise_2_desc">Philosophie et processus holistiques plaçant l'humain au cœur de la conception, de la recherche exploratoire à la validation continue.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 data-i18n="expertise_3_title">Architecture d'Information &amp; Systèmes</h3>
+          <p data-i18n="expertise_3_desc">Structuration de systèmes d'information, modélisation de flux d'affaires complexes (workflows) et gouvernance de solutions évolutives.</p>
+        </div>
+      </div>
+      <div class="methods">
+        <span class="tag" data-i18n="exp_tag_heuristics">Évaluation heuristique</span>
+        <span class="tag" data-i18n="exp_tag_card_sorting">Tri de cartes</span>
+        <span class="tag" data-i18n="exp_tag_tree_jack">Tree testing / Tree jack</span>
+        <span class="tag" data-i18n="exp_tag_user_testing">Test utilisateur</span>
+        <span class="tag" data-i18n="exp_tag_interview">Entrevue</span>
+        <span class="tag" data-i18n="exp_tag_user_journey">User journey</span>
+        <span class="tag" data-i18n="exp_tag_persona">Persona</span>
+        <span class="tag" data-i18n="exp_tag_benchmark">Benchmark</span>
+        <span class="tag" data-i18n="exp_tag_info_architecture">Information architecture</span>
+        <span class="tag" data-i18n="exp_tag_workflow">Workflow</span>
+        <span class="tag" data-i18n="exp_tag_design_system">Design System</span>
+        <span class="tag" data-i18n="exp_tag_roadmap">Feuille de route (Roadmap)</span>
+        <span class="tag" data-i18n="exp_tag_wcag">WCAG</span>
+      </div>
+    </section>
+
+    <section id="contact" class="fade">
+      <div class="contact-card">
+        <h2 data-i18n="contact_title">Prêt à rejoindre votre équipe</h2>
+        <p data-i18n="contact_subtitle">Actuellement ouvert aux opportunités permanentes en tant que Senior ou Lead UX / Product Designer. Basé à Ottawa (disponible pour le télétravail).</p>
+        <a href="mailto:yannick.roy@gmail.com" class="btn-primary" data-i18n="contact_btn">Discuter d’une opportunité</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Yannick Roy</p>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        nav_projects: "Projets", nav_expertise: "Expertise", nav_contact: "Contact", nav_cv: "CV",
+        hero_status: "Disponible pour un poste permanent Senior / Lead UX",
+        hero_subtitle: "Lead UX & Product Designer avec 17 ans d’expérience. Spécialisé en <strong>ergonomie cognitive</strong>, <strong>design centré utilisateur</strong> et transformation de services complexes.",
+        hero_cta_primary: "Découvrir mes projets",
+        stat_years: "années d’expérience en UX et design produit",
+        stat_bdc: "de transactions facilitées par la refonte BDC",
+        stat_cycle: "cycle d’autorisation de prêts, avant et après la refonte BDC",
+        stat_bell: "participants au benchmark Internet Buyflow (Bell)",
+        projects_title: "Projets",
+        project_bdc_desc: "Refonte d'un système national d'autorisation de prêts. Réduction du cycle de validation de 10 jours à 24 heures, facilitant 240 M$ de transactions.",
+        project_bell_desc: "Benchmark, tests utilisateurs et audit d'accessibilité pour Bell Canada. Exemple d'application au portail EPP.",
+        project_boires_desc: "Design d'une plateforme spécialisée vin. Alignement des règles d'affaires et définition des parcours utilisateurs.",
+        expertise_title: "Expertise",
+        expertise_1_title: "Ergonomie Cognitive",
+        expertise_1_desc: "Compréhension du fonctionnement humain (système attentionnel, mémoire, théories de l'apprentissage) appliquée à la conception d'interfaces pour réduire la charge mentale.",
+        expertise_2_title: "Design Centré Utilisateur (UX)",
+        expertise_2_desc: "Philosophie et processus holistiques plaçant l'humain au cœur de la conception, de la recherche exploratoire à la validation continue.",
+        expertise_3_title: "Architecture d'Information & Systèmes",
+        expertise_3_desc: "Structuration de systèmes d'information, modélisation de flux d'affaires complexes (workflows) et gouvernance de solutions évolutives.",
+        exp_tag_heuristics: "Évaluation heuristique", exp_tag_card_sorting: "Tri de cartes",
+        exp_tag_tree_jack: "Tree testing / Tree jack", exp_tag_user_testing: "Test utilisateur",
+        exp_tag_interview: "Entrevue", exp_tag_user_journey: "User journey", exp_tag_persona: "Persona",
+        exp_tag_benchmark: "Benchmark", exp_tag_info_architecture: "Information architecture",
+        exp_tag_workflow: "Workflow", exp_tag_design_system: "Design System",
+        exp_tag_roadmap: "Feuille de route (Roadmap)", exp_tag_wcag: "WCAG",
+        contact_title: "Prêt à rejoindre votre équipe",
+        contact_subtitle: "Actuellement ouvert aux opportunités permanentes en tant que Senior ou Lead UX / Product Designer. Basé à Ottawa (disponible pour le télétravail).",
+        contact_btn: "Discuter d’une opportunité"
+      },
+      en: {
+        nav_projects: "Projects", nav_expertise: "Expertise", nav_contact: "Contact", nav_cv: "Resume",
+        hero_status: "Seeking permanent Senior / Lead UX roles",
+        hero_subtitle: "Lead UX & Product Designer with 17 years of experience. Specialized in <strong>cognitive ergonomics</strong>, <strong>user-centered design</strong> and complex service transformation.",
+        hero_cta_primary: "Explore my work",
+        stat_years: "years of experience in UX and product design",
+        stat_bdc: "in transactions facilitated by the BDC redesign",
+        stat_cycle: "loan approval cycle, before and after the BDC redesign",
+        stat_bell: "participants in the Internet Buyflow benchmark (Bell)",
+        projects_title: "Projects",
+        project_bdc_desc: "Redesign of a national loan approval system. Reduced approval cycle from 10 days to under 24 hours, facilitating $240M in transactions.",
+        project_bell_desc: "Benchmark, user testing and accessibility audit for Bell Canada. EPP portal application example.",
+        project_boires_desc: "Design of a specialized wine platform. Alignment of business rules and definition of user journeys.",
+        expertise_title: "Expertise",
+        expertise_1_title: "Cognitive Ergonomics",
+        expertise_1_desc: "Understanding human cognition (attention, working memory, learning theories) applied to interface design to systematically reduce cognitive load.",
+        expertise_2_title: "User-Centered Design (UX)",
+        expertise_2_desc: "Holistic philosophy and process placing humans at the heart of design, from exploratory research to continuous validation.",
+        expertise_3_title: "Information Architecture & Systems",
+        expertise_3_desc: "Structuring information systems, modeling complex business workflows, and establishing scalable Design System governance.",
+        exp_tag_heuristics: "Heuristic Evaluation", exp_tag_card_sorting: "Card Sorting",
+        exp_tag_tree_jack: "Tree Testing / Tree Jack", exp_tag_user_testing: "User Testing",
+        exp_tag_interview: "User Interview", exp_tag_user_journey: "User Journey", exp_tag_persona: "Persona",
+        exp_tag_benchmark: "UX Benchmark", exp_tag_info_architecture: "Information Architecture",
+        exp_tag_workflow: "Workflow", exp_tag_design_system: "Design System",
+        exp_tag_roadmap: "UX Roadmap", exp_tag_wcag: "WCAG Compliance",
+        contact_title: "Ready to join your team",
+        contact_subtitle: "Currently seeking permanent Senior or Lead UX / Product Designer roles. Based in Ottawa, fully equipped for remote collaboration.",
+        contact_btn: "Let's discuss opportunities"
+      }
+    };
+    function getInitialLanguage() {
+      const saved = localStorage.getItem("user_lang");
+      if (saved === "fr" || saved === "en") return saved;
+      return navigator.language.slice(0, 2) === "fr" ? "fr" : "en";
+    }
+    let currentLang = getInitialLanguage();
+    function updatePageLanguage(lang) {
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      const langText = document.getElementById("lang-text");
+      if (langText) langText.textContent = lang === "fr" ? "EN" : "FR";
+      const cvBtn = document.querySelector(".btn-cv");
+      if (cvBtn) cvBtn.setAttribute("href", lang === "fr" ? "CV_Yannick-Roy_2026_fr.pdf" : "CV_Yannick-Roy_2026_en.pdf");
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      updatePageLanguage(currentLang);
+      const toggle = document.getElementById("lang-toggle");
+      if (toggle) toggle.addEventListener("click", () => {
+        currentLang = currentLang === "fr" ? "en" : "fr";
+        localStorage.setItem("user_lang", currentLang);
+        updatePageLanguage(currentLang);
+      });
+      const progress = document.getElementById("progress");
+      window.addEventListener("scroll", () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+      }, { passive: true });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); observer.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
